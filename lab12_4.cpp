@@ -2,6 +2,10 @@
 
 using namespace std;
 
+//Function Prototype
+template <typename T>
+T mySwap(T &, T &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -30,3 +34,13 @@ int main(){
 	return 0;
 }
 
+//Function Definition with Template form อะเช้ยโครตเท่ โครตอันตราย
+template <typename currentType>
+currentType mySwap(currentType &x,currentType &y){
+	currentType i;
+	i = x;
+	x = y;
+	y = i;
+	return x;
+	return y;
+}
